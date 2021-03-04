@@ -299,7 +299,7 @@ public class Gui extends JFrame implements WindowListener {
 			if (JOptionPane.showConfirmDialog(this, "Are you sure you want to commit without message?", "Commit without message?", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE) != JOptionPane.OK_OPTION)
 				return;
 		} else
-			gitCommands[3] += " -m " + gitTextField.getText();
+			gitCommands[3] += " -m \"" + gitTextField.getText() + '"';
 		
 		gitService = new Service(gitCommands);
 		
